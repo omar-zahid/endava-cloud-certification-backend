@@ -2,7 +2,9 @@ use std::sync::Arc;
 
 use axum::{extract::FromRequestParts, http::HeaderValue};
 use azure_jwt::{AzureAuth, AzureJwtClaims};
+use jsonwebtoken::{Algorithm, Validation};
 use tokio::sync::Mutex;
+use tracing::{debug, warn};
 
 use crate::{error::AppError, state::AppState};
 
@@ -26,18 +28,54 @@ impl FromRequestParts<AppState> for AzureClaims {
         parts: &mut axum::http::request::Parts,
         state: &AppState,
     ) -> Result<Self, Self::Rejection> {
-        let authz = parts
-            .headers
-            .get(axum::http::header::AUTHORIZATION)
-            .ok_or(AppError::Unauthorized)?;
+        let authz = match parts.headers.get(axum::http::header::AUTHORIZATION) {
+            Some(h) => {
+                debug!("Authorization header found.");
+                h
+            }
+            None => {
+                warn!("Missing authorization header,");
+                return Err(AppError::Unauthorized);
+            }
+        };
 
-        let token = bearer_token(authz).ok_or(AppError::Unauthorized)?;
+        let token = match bearer_token(authz) {
+            Some(t) => {
+                debug!("Bearer token extracted (len={})", t.len());
+                t
+            }
+            None => {
+                warn!("Auth header is not a valid Bearer token");
+                return Err(AppError::Unauthorized);
+            }
+        };
 
         let decoded = {
+            debug!("Validating Azure JWT");
+
             let mut auth = state.azure.lock().await;
-            auth.validate_token_async(token)
+            let mut validator = Validation::new(Algorithm::RS256);
+
+            validator.set_audience(&[format!("api://{}", state.azure_client_id)]);
+
+            match auth
+                .validate_custom_async::<AzureJwtClaims>(token, &validator)
                 .await
-                .map_err(|_| AppError::Unauthorized)?
+            {
+                Ok(d) => {
+                    debug!(
+                        aud = ?d.claims.aud,
+                        iss = %d.claims.iss,
+                        scp = ?d.claims.scp,
+                        tid = %d.claims.tid,
+                    "Azure JWT validated successfully");
+                    d
+                }
+                Err(e) => {
+                    warn!(error = ?e, "Azure JWT validation failed");
+                    return Err(AppError::Unauthorized);
+                }
+            }
         };
 
         Ok(AzureClaims(decoded.claims))

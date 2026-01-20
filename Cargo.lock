@@ -113,6 +113,7 @@ dependencies = [
  "axum",
  "azure_jwt",
  "dotenvy",
+ "jsonwebtoken",
  "serde",
  "serde_json",
  "sqlx",
