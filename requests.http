@@ -1,10 +1,10 @@
-@baseUrl = http://localhost:3000
-
+### @baseUrl = http://localhost:3000
+@baseUrl = https://endava.azurewebsites.net
 ###
 GET {{baseUrl}}
 Authorization: Bearer {{token}}
 
 ### Health and readiness endpoints
-GET localhost:3000/health
+GET {{baseUrl}}/health
 ###
-GET localhost:3000/ready
+GET {{baseUrl}}/ready

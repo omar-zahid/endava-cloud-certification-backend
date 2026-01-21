@@ -1,5 +1,5 @@
 on: [push]
-name: Linux_Container_Workflow
+name: Build container and deploy to Azure Web App
 
 jobs:
   build-and-deploy:
@@ -35,3 +35,9 @@ jobs:
           registry-password: ${{ secrets.REGISTRY_PASSWORD }}
           name: axum
           location: "southeastasia"
+
+      - name: "Deploy to Azure Web App"
+        uses: azure/webapps-deploy@v3
+        with:
+          app-name: "endava"
+          images: "${{ secrets.REGISTRY_LOGIN_SERVER }}/axum:${{ github.sha }}"
