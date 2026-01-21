@@ -9,14 +9,16 @@ const APP_VERSION: &'static str = env!("CARGO_PKG_VERSION");
 struct RootResponse {
     name: &'static str,
     version: &'static str,
+    claims: AzureClaims,
 }
 
-pub async fn root(_claims: AzureClaims) -> impl IntoResponse {
+pub async fn root(claims: AzureClaims) -> impl IntoResponse {
     (
         StatusCode::OK,
         Json(RootResponse {
             name: "Endava Cloud Certification - API Server",
             version: APP_VERSION,
+            claims,
         }),
     )
 }

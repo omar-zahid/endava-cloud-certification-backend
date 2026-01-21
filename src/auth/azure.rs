@@ -3,6 +3,7 @@ use std::sync::Arc;
 use axum::{extract::FromRequestParts, http::HeaderValue};
 use azure_jwt::{AzureAuth, AzureJwtClaims};
 use jsonwebtoken::{Algorithm, Validation};
+use serde::Serialize;
 use tokio::sync::Mutex;
 use tracing::{debug, warn};
 
@@ -13,6 +14,7 @@ pub async fn build_azure_auth(client_id: &str) -> anyhow::Result<Arc<Mutex<Azure
     Ok(Arc::new(Mutex::new(auth)))
 }
 
+#[derive(Debug, Serialize)]
 pub struct AzureClaims(pub AzureJwtClaims);
 
 fn bearer_token(h: &HeaderValue) -> Option<&str> {

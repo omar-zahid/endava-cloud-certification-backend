@@ -4,5 +4,7 @@
 GET {{baseUrl}}
 Authorization: Bearer {{token}}
 
-###
+### Health and readiness endpoints
 GET localhost:3000/health
+###
+GET localhost:3000/ready
