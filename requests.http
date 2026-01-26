@@ -9,4 +9,4 @@ GET {{baseUrl}}/health
 ###
 GET {{baseUrl}}/ready
 ###
-GET {{baseUrl}}/certificates
+GET {{baseUrl}}/certificates?vendor=AWS
