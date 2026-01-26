@@ -1,3 +1,4 @@
+pub mod seed;
 use std::time::Duration;
 
 use sqlx::{PgPool, postgres::PgPoolOptions};

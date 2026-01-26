@@ -1,0 +1,213 @@
+[
+  {
+    "name": "Microsoft Certified: Azure AI Engineer Associate",
+    "description": "Design and implement an Azure AI solution using Azure AI services, Azure AI Search, and Azure Open AI.",
+    "badgeUrl": "https://learn.microsoft.com/en-us/media/learn/certification/badges/microsoft-certified-associate-badge.svg",
+    "vendor": "Azure",
+    "level": "Associate",
+    "role": "AI Engineer",
+    "subject": "Artificial intelligence",
+    "externalLink": "https://learn.microsoft.com/en-us/credentials/certifications/azure-ai-engineer/?practice-assessment-type=certification"
+  },
+  {
+    "name": "Microsoft Certified: Azure Administrator Associate",
+    "description": "Demonstrate key skills to configure, manage, secure, and administer key professional functions in Microsoft Azure.",
+    "badgeUrl": "https://learn.microsoft.com/en-us/media/learn/certification/badges/microsoft-certified-associate-badge.svg",
+    "vendor": "Azure",
+    "level": "Associate",
+    "role": "Administrator",
+    "subject": "",
+    "externalLink": "https://learn.microsoft.com/en-us/credentials/certifications/azure-administrator/?practice-assessment-type=certification"
+  },
+  {
+    "name": "Microsoft Certified: Azure Data Scientist Associate",
+    "description": "Manage data ingestion and preparation, model training and deployment, and machine learning solution monitoring with Python, Azure Machine Learning and MLflow.",
+    "badgeUrl": "https://learn.microsoft.com/en-us/media/learn/certification/badges/microsoft-certified-associate-badge.svg",
+    "vendor": "Azure",
+    "level": "Associate",
+    "role": "Data Scientist",
+    "subject": "Machine learning",
+    "externalLink": "https://learn.microsoft.com/en-us/credentials/certifications/azure-data-scientist/?practice-assessment-type=certification"
+  },
+  {
+    "name": "Microsoft Certified: Azure Database Administrator Associate",
+    "description": "Administer an SQL Server database infrastructure for cloud, on-premises and hybrid relational databases using the Microsoft PaaS relational database offerings.",
+    "badgeUrl": "https://learn.microsoft.com/en-us/media/learn/certification/badges/microsoft-certified-associate-badge.svg",
+    "vendor": "Azure",
+    "level": "Associate",
+    "role": "Database Administrator",
+    "subject": "Databases",
+    "externalLink": "https://learn.microsoft.com/en-us/credentials/certifications/azure-database-administrator-associate/?practice-assessment-type=certification"
+  },
+  {
+    "name": "Microsoft Certified: Azure Developer Associate",
+    "description": "Build end-to-end solutions in Microsoft Azure to create Azure Functions, implement and manage web apps, develop solutions utilizing Azure storage, and more.",
+    "badgeUrl": "https://learn.microsoft.com/en-us/media/learn/certification/badges/microsoft-certified-associate-badge.svg",
+    "vendor": "Azure",
+    "level": "Associate",
+    "role": "Developer",
+    "subject": "Application development",
+    "externalLink": "https://learn.microsoft.com/en-us/credentials/certifications/azure-developer/?practice-assessment-type=certification"
+  },
+  {
+    "name": "Microsoft Certified: Azure Network Engineer Associate",
+    "description": "Demonstrate the design, implementation, and maintenance of Azure networking infrastructure, load balancing traffic, network routing, and more.",
+    "badgeUrl": "https://learn.microsoft.com/en-us/media/learn/certification/badges/microsoft-certified-associate-badge.svg",
+    "vendor": "Azure",
+    "level": "Associate",
+    "role": "Network Engineer",
+    "subject": "Technical infrastructure",
+    "externalLink": "https://learn.microsoft.com/en-us/credentials/certifications/azure-network-engineer-associate/?practice-assessment-type=certification"
+  },
+  {
+    "name": "Microsoft Certified: Azure Security Engineer Associate",
+    "description": "Demonstrate the skills needed to implement security controls, maintain an organization’s security posture, and identify and remediate security vulnerabilities.",
+    "badgeUrl": "https://learn.microsoft.com/en-us/media/learn/certification/badges/microsoft-certified-associate-badge.svg",
+    "vendor": "Azure",
+    "level": "Associate",
+    "role": "Security Engineer",
+    "subject": "Security",
+    "externalLink": "https://learn.microsoft.com/en-us/credentials/certifications/azure-security-engineer/?practice-assessment-type=certification"
+  },
+  {
+    "name": "Microsoft Certified: Identity and Access Administrator Associate",
+    "description": "Demonstrate the features of Microsoft Entra ID to modernize identity solutions, implement hybrid solutions, and implement identity governance.",
+    "badgeUrl": "https://learn.microsoft.com/en-us/media/learn/certification/badges/microsoft-certified-associate-badge.svg",
+    "vendor": "Azure",
+    "level": "Associate",
+    "role": "Security Engineer",
+    "subject": "Security",
+    "externalLink": "https://learn.microsoft.com/en-us/credentials/certifications/identity-and-access-administrator/?practice-assessment-type=certification"
+  },
+  {
+    "name": "Microsoft Certified: Security Operations Analyst Associate",
+    "description": "Investigate, search for, and mitigate threats using Microsoft Sentinel, Microsoft Defender for Cloud, and Microsoft 365 Defender.",
+    "badgeUrl": "https://learn.microsoft.com/en-us/media/learn/certification/badges/microsoft-certified-associate-badge.svg",
+    "vendor": "Azure",
+    "level": "Associate",
+    "role": "Security Operations Analyst",
+    "subject": "Security",
+    "externalLink": "https://learn.microsoft.com/en-us/credentials/certifications/security-operations-analyst/?practice-assessment-type=certification"
+  },
+  {
+    "name": "Microsoft Certified: Windows Server Hybrid Administrator Associate",
+    "description": "As a candidate for this certification, you’re responsible for administering Windows Server as a workload in both on-premises and hybrid environments. In this role, you deploy, implement, manage, and troubleshoot Windows Server in Azure as well as migrating and deploying workloads to Azure. You administer on- identity, security, management, compute, networking, storage, monitoring, high availability, and disaster recovery for Windows Server. You typically collaborate with architects, administrators, and engineers.You use administrative tools and technologies such as Windows Admin Center, PowerShell, Azure Arc, Azure Policy, Azure Monitor, Azure Update Manager, Microsoft Defender for Identity, Microsoft Defender for Cloud, and IaaS virtual machine (VM) administration. As a candidate for this certification, you should have several years of experience with Windows Server operating systems.",
+    "badgeUrl": "https://learn.microsoft.com/en-us/media/learn/certification/badges/microsoft-certified-associate-badge.svg",
+    "vendor": "Azure",
+    "level": "Associate",
+    "role": "Windows Server Hybrid Administrator",
+    "subject": "Hybrid Windows Server Administration",
+    "externalLink": "https://learn.microsoft.com/en-us/credentials/certifications/windows-server-hybrid-administrator/"
+  },
+  {
+    "name": "Microsoft Certified: Azure Solutions Architect Expert",
+    "description": "As a Microsoft Azure solutions architect, you have subject-matter expertise in designing cloud and hybrid solutions that run on Azure, covering compute, network, storage, monitoring, and security. Your role involves advising stakeholders and translating business requirements into solution designs that align with the Azure Well-Architected Framework and the Cloud Adoption Framework for Azure. You work closely with developers, administrators, security engineers, and data engineers to implement these solutions successfully. As a candidate for this certification, you’re expected to have advanced experience in IT operations, including networking, virtualization, identity, security, business continuity, disaster recovery, data platforms, and governance. You should understand how decisions in each of these areas influence the overall architecture. In addition, you’re expected to have hands-on experience with Azure administration, Azure development, and DevOps processes.",
+    "badgeUrl": "https://learn.microsoft.com/en-us/media/learn/certification/badges/microsoft-certified-expert-badge.svg",
+    "vendor": "Azure",
+    "level": "Professional",
+    "role": "Solutions Architect",
+    "subject": "Solution Architecture",
+    "externalLink": "https://learn.microsoft.com/en-us/credentials/certifications/azure-solutions-architect/"
+  },
+  {
+    "name": "Microsoft Certified: DevOps Engineer Expert",
+    "description": "As a DevOps engineer, you are a developer or infrastructure administrator who also has subject-matter expertise in working with people, processes, and products to enable the continuous delivery of value in organizations. Your responsibilities for this role include delivering Microsoft DevOps solutions that provide continuous security, integration, testing, delivery, deployment, monitoring, and feedback, while designing and implementing workflows, collaboration, communication, source control, and automation. In this role, you work on cross-functional teams that include developers, site reliability engineers, Azure administrators, and security engineers. You must have experience both administering and developing in Azure, with strong skills in at least one of these areas, and you should also have experience implementing both GitHub and Azure DevOps solutions.",
+    "badgeUrl": "https://learn.microsoft.com/en-us/media/learn/certification/badges/microsoft-certified-expert-badge.svg",
+    "vendor": "Azure",
+    "level": "Professional",
+    "role": "DevOps Engineer",
+    "subject": "DevOps",
+    "externalLink": "https://learn.microsoft.com/en-us/credentials/certifications/devops-engineer/"
+  },
+  {
+    "name": "Microsoft Certified: Power Platform Solution Architect Expert",
+    "description": "As a candidate for this certification, you should have solution architecture experience across the functional and technical disciplines of Microsoft Power Platform and be able to facilitate design decisions based on recommended practices across development, configuration, integration, infrastructure, security, licensing, storage, and change management. In this role, you are required to architect and ensure the successful implementation of appropriate end-to-end solutions to address the business and technical needs of organizations, and you should have knowledge of Microsoft Power Platform, Dynamics 365 customer engagement apps, related Microsoft cloud solutions, and other third-party technologies, as well as be aware of the Power Platform Well-Architected Framework and ideally have used it for implementation.",
+    "badgeUrl": "https://learn.microsoft.com/en-us/media/learn/certification/badges/microsoft-certified-expert-badge.svg",
+    "vendor": "Azure",
+    "level": "Professional",
+    "role": "Platform Solution Architect",
+    "subject": "Solutions Architecture",
+    "externalLink": "https://learn.microsoft.com/en-us/credentials/certifications/power-platform-solution-architect-expert/"
+  },
+  {
+    "name": "AWS Certified Machine Learning Engineer - Associate",
+    "description": "AWS Certified Machine Learning Engineer - Associate validates technical ability in implementing ML workloads in production and operationalizing them. Boost your career profile and credibility, and position yourself for in-demand machine learning job roles.",
+    "badgeUrl": "https://d1.awsstatic.com/onedam/marketing-channels/website/aws/en_US/certification/approved/images/certification-badges/mla-badge-resized.20359646cf8917b1cf570f5acbb2d479b367d152.png",
+    "vendor": "AWS",
+    "level": "Associate",
+    "role": "Machine Learning Engineer",
+    "subject": "Machine Learning",
+    "externalLink": "https://aws.amazon.com/certification/certified-machine-learning-engineer-associate/"
+  },
+  {
+    "name": "AWS Certified Solutions Architect - Associate",
+    "description": "Focuses on the design of cost and performance optimized solutions. This is an ideal starting point for candidates with AWS Cloud or strong on-premises IT experience. This exam does not require deep hands-on coding experience, although familiarity with basic programming concepts would be an advantage.",
+    "badgeUrl": "https://d1.awsstatic.com/onedam/marketing-channels/website/aws/en_US/certification/approved/images/certification-badges/saa-badge-resized.9b93c4e701caace22b68eeb10292c9de9d3c44c2.png",
+    "vendor": "AWS",
+    "level": "Associate",
+    "role": "Solutions Architect",
+    "subject": "Solutions Architecture",
+    "externalLink": "https://aws.amazon.com/certification/certified-solutions-architect-associate/"
+  },
+  {
+    "name": "AWS Certified Data Engineer - Associate",
+    "description": "Validates skills and knowledge in core data-related AWS services, ability to ingest and transform data, orchestrate data pipelines while applying programming concepts, design data models, manage data life cycles, and ensure data quality.",
+    "badgeUrl": "https://d1.awsstatic.com/onedam/marketing-channels/website/aws/en_US/certification/approved/images/certification-badges/dea-badge-resized.d690717f5a67a228325f8468fba38518a0461d05.png",
+    "vendor": "AWS",
+    "level": "Associate",
+    "role": "Data Engineer",
+    "subject": "Data Engineering",
+    "externalLink": "https://aws.amazon.com/certification/certified-data-engineer-associate/"
+  },
+  {
+    "name": "AWS Certified CloudOps Engineer - Associate",
+    "description": "Validates skills and knowledge in monitoring and maintaining AWS workloads, implementing security controls and networking concepts, performing business continuity procedures, and implementing cost and performance optimizations.",
+    "badgeUrl": "https://d1.awsstatic.com/onedam/marketing-channels/website/aws/en_US/certification/approved/images/certification-badges/cloudops-resized.b87f2ab12960be38017a5a0cf41ef8844e88a432.png",
+    "vendor": "AWS",
+    "level": "Associate",
+    "role": "CloudOps Engineer",
+    "subject": "CloudOps",
+    "externalLink": "https://aws.amazon.com/certification/certified-cloudops-engineer-associate/"
+  },
+  {
+    "name": "AWS Certified Developer - Associate",
+    "description": "Showcases skills and knowledge in developing, optimizing, packaging, and deploying applications, using CI/CD workflows, and identifying and resolving application issues. This certification is a good starting point on the AWS Certification journey for individuals in IT or cloud developer job roles.",
+    "badgeUrl": "https://d1.awsstatic.com/onedam/marketing-channels/website/aws/en_US/certification/approved/images/certification-badges/dva-badge-resized.5e17ff1099d56f6e57a2dab8c7abf78f46f3150a.png",
+    "vendor": "AWS",
+    "level": "Associate",
+    "role": "Developer",
+    "subject": "Application development",
+    "externalLink": "https://aws.amazon.com/certification/certified-developer-associate/"
+  },
+  {
+    "name": "AWS Certified Generative AI Developer - Professional",
+    "description": "Showcases advanced technical expertise in building and deploying production-ready AI solutions using AWS Services like Bedrock. Perfect for developers with 2+ years of cloud experience looking to advance their careers. For organizations investing in AI initiatives, this certification provides a reliable way to identify and verify developers who can move beyond proofs-of-concept to build production-grade generative AI solutions that deliver tangible business results while maintaining security and cost efficiency.",
+    "badgeUrl": "https://d1.awsstatic.com/onedam/marketing-channels/website/aws/en_US/certification/approved/images/certification-badges/gdp-badge-resized-early.f5b8cafeaa4937ad316604a43973557d5d4af9ac.png",
+    "vendor": "AWS",
+    "level": "Professional",
+    "role": "GenAI Developer",
+    "subject": "GenAI Application development",
+    "externalLink": "https://aws.amazon.com/certification/certified-generative-ai-developer-professional/"
+  },
+  {
+    "name": "AWS Certified Solutions Architect - Professional",
+    "description": "Helps certified individuals showcase advanced knowledge and skills in providing complex solutions to complex problems, optimizing security, cost, and performance, and automating manual processes. This certification is a means for organizations to identify and develop talent with these critical skills for implementing cloud initiatives.",
+    "badgeUrl": "https://d1.awsstatic.com/onedam/marketing-channels/website/aws/en_US/certification/approved/images/certification-badges/sap-badge-resized.9e8ae1262604d016faf72f1be40387fc6b1ae133.png",
+    "vendor": "AWS",
+    "level": "Professional",
+    "role": "Solutions Architect",
+    "subject": "Solutions Architecture",
+    "externalLink": "https://aws.amazon.com/certification/certified-solutions-architect-professional/"
+  },
+  {
+    "name": "AWS Certified DevOps Engineer - Professional",
+    "description": "Showcases advanced technical expertise in provisioning, operating, and managing distributed application systems on AWS, giving you increased confidence and credibility with peers, colleagues, and customers. Organizations with these qualified professionals can ensure speedy delivery of secure and compliant systems that are highly available and scalable.",
+    "badgeUrl": "https://d1.awsstatic.com/onedam/marketing-channels/website/aws/en_US/certification/approved/images/certification-badges/dop-badge-resized.3c0f93f6f99b2baa1eed84813f2fbac054339f15.png",
+    "vendor": "AWS",
+    "level": "Professional",
+    "role": "DevOps Engineer",
+    "subject": "DevOps",
+    "externalLink": "https://aws.amazon.com/certification/certified-devops-engineer-professional/"
+  }
+]
+
