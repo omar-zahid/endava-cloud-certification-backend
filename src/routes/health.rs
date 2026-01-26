@@ -4,7 +4,7 @@ use serde::Serialize;
 use crate::state::AppState;
 
 #[derive(Serialize)]
-struct HealthResponse {
+pub struct HealthResponse {
     status: &'static str,
 }
 
