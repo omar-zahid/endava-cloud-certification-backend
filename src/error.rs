@@ -23,6 +23,7 @@ pub enum AppError {
 #[derive(Debug, Serialize)]
 struct ErrorBody {
     error: String,
+    cause: Option<String>,
 }
 
 impl IntoResponse for AppError {
@@ -37,6 +38,11 @@ impl IntoResponse for AppError {
             status,
             Json(ErrorBody {
                 error: self.to_string(),
+                cause: match &self {
+                    AppError::Db(e) => Some(e.to_string()),
+                    AppError::Internal(e) => Some(e.to_string()),
+                    _ => None,
+                },
             }),
         )
             .into_response()
