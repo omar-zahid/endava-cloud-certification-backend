@@ -3,7 +3,7 @@ use serde::Serialize;
 
 use crate::auth::azure::AzureClaims;
 
-const APP_VERSION: &'static str = env!("CARGO_PKG_VERSION");
+const APP_VERSION: &str = env!("CARGO_PKG_VERSION");
 
 #[derive(Serialize)]
 struct RootResponse {
