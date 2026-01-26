@@ -33,7 +33,6 @@ CREATE TABLE users (
 CREATE TABLE certificates (
     id uuid PRIMARY KEY DEFAULT gen_random_uuid(),
     vendor certificate_vendor NOT NULL,
-    code text,
     name text NOT NULL,
     description text NOT NULL,
     badge_url text NOT NULL,

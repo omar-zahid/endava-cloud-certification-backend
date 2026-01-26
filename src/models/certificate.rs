@@ -26,7 +26,6 @@ pub enum CertificateLevel {
 pub struct Certificate {
     pub id: Uuid,
     pub vendor: CertificateVendor,
-    pub code: Option<String>,
     pub name: String,
     pub description: String,
     pub badge_url: String,
@@ -34,8 +33,6 @@ pub struct Certificate {
     pub role: String,
     pub subject: String,
     pub external_link: String,
-    pub expires: DateTime<Utc>,
-    pub validity_days: Option<i32>,
     pub created_at: DateTime<Utc>,
     pub updated_at: DateTime<Utc>,
 }
