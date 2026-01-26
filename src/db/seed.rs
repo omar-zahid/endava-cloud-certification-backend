@@ -28,7 +28,6 @@ pub async fn seed_certificates_from_json(pool: &PgPool, path: &str) -> anyhow::R
             INSERT INTO certificates
             (name, description, badge_url, vendor, level, role, subject, external_link)
             VALUES ($1, $2, $3, $4, $5, $6, $7, $8)
-            ON CONFLICT (name) DO NOTHING
             "#,
         )
         .bind(cert.name)

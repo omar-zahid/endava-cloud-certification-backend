@@ -9,6 +9,8 @@ use uuid::Uuid;
 #[sqlx(type_name = "certificate_vendor", rename_all = "PascalCase")]
 pub enum CertificateVendor {
     Azure,
+    #[serde(rename = "AWS")]
+    #[sqlx(rename = "AWS")]
     AWS,
 }
 
