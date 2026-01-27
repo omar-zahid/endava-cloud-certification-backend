@@ -9,4 +9,12 @@ GET {{baseUrl}}/health
 ###
 GET {{baseUrl}}/ready
 ###
+GET {{baseUrl}}/certificates
+###
+GET {{baseUrl}}/certificates?vendor=Azure
+###
 GET {{baseUrl}}/certificates?vendor=AWS
+###
+GET {{baseUrl}}/certificates/roles
+###
+GET {{baseUrl}}/certificates?role=DevOps Engineer
