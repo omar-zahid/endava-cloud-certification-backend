@@ -13,5 +13,6 @@ async fn main() -> anyhow::Result<()> {
     info!(addr = %settings.addr, "starting server");
     let listener = tokio::net::TcpListener::bind(settings.addr).await?;
     axum::serve(listener, app).await?;
+
     Ok(())
 }

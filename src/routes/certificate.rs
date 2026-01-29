@@ -21,7 +21,9 @@ pub async fn get_certificate(
     Query(filter): Query<CertificateFilter>,
 ) -> Result<Json<Vec<Certificate>>, AppError> {
     let certificates = sqlx::query_as::<_, Certificate>(
-        "SELECT * FROM certificates WHERE ($1::certificate_vendor IS NULL OR vendor = $1) AND ($2::TEXT IS NULL OR role = $2)",
+        "SELECT * FROM certificates 
+         WHERE ($1::certificate_vendor IS NULL OR vendor = $1) 
+         AND ($2::TEXT IS NULL OR role = $2)",
     )
     .bind(filter.vendor)
     .bind(filter.role)

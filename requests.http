@@ -18,3 +18,5 @@ GET {{baseUrl}}/certificates?vendor=AWS
 GET {{baseUrl}}/certificates/roles
 ###
 GET {{baseUrl}}/certificates?role=DevOps Engineer
+###
+POST {{baseUrl}}/certificates
