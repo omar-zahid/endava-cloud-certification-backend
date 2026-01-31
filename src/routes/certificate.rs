@@ -44,3 +44,17 @@ pub async fn get_certificate_by_id(
         None => Err(AppError::NotFound),
     }
 }
+
+pub async fn get_certificate_roles(
+    State(state): State<AppState>,
+) -> Result<Json<Vec<String>>, AppError> {
+    let roles =
+        sqlx::query_as::<_, (String,)>("SELECT DISTINCT role FROM certificates ORDER BY role ASC")
+            .fetch_all(&state.pool)
+            .await?
+            .into_iter()
+            .map(|(role,)| role)
+            .collect();
+
+    Ok(Json(roles))
+}

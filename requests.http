@@ -10,3 +10,5 @@ GET {{baseUrl}}/health
 GET {{baseUrl}}/ready
 ###
 GET {{baseUrl}}/certificates?vendor=AWS
+###
+GET {{baseUrl}}/certificates/roles
