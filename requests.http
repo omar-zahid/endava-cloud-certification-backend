@@ -1,5 +1,5 @@
-@baseUrl = http://localhost:3000
-# @baseUrl = https://endava.azurewebsites.net
+# @baseUrl = http://localhost:3000
+@baseUrl = https://endava.azurewebsites.net
 ###
 GET {{baseUrl}}
 Authorization: Bearer {{token}}
