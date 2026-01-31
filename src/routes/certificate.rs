@@ -1,8 +1,9 @@
 use axum::{
     Json,
-    extract::{Query, State},
+    extract::{Path, Query, State},
 };
 use serde::Deserialize;
+use uuid::Uuid;
 
 use crate::{
     error::AppError,
@@ -27,4 +28,19 @@ pub async fn get_certificate(
     .await?;
 
     Ok(Json(certificates))
+}
+
+pub async fn get_certificate_by_id(
+    State(state): State<AppState>,
+    Path(id): Path<Uuid>,
+) -> Result<Json<Certificate>, AppError> {
+    let certificate = sqlx::query_as::<_, Certificate>("SELECT * FROM certificates WHERE id = $1")
+        .bind(id)
+        .fetch_optional(&state.pool)
+        .await?;
+
+    match certificate {
+        Some(certificate) => Ok(Json(certificate)),
+        None => Err(AppError::NotFound),
+    }
 }
