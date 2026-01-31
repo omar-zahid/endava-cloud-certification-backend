@@ -23,6 +23,7 @@ pub enum CertificateLevel {
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize, FromRow)]
+#[serde(rename_all = "camelCase")]
 pub struct Certificate {
     pub id: Uuid,
     pub vendor: CertificateVendor,
