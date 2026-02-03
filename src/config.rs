@@ -8,6 +8,11 @@ pub struct Settings {
 }
 
 impl Settings {
+    /// Loads settings from environment variables.
+    ///
+    /// # Errors
+    ///
+    /// Returns an error if required environment variables are missing or invalid.
     pub fn load() -> anyhow::Result<Self> {
         let addr: SocketAddr = env::var("APP_ADDR")
             .unwrap_or_else(|_| "0.0.0.0:3000".into())

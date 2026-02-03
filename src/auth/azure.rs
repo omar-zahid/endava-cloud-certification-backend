@@ -9,6 +9,11 @@ use tracing::{debug, warn};
 
 use crate::{error::AppError, state::AppState};
 
+/// Builds the Azure auth client.
+///
+/// # Errors
+///
+/// Returns an error if the Azure auth client cannot be initialized.
 pub async fn build_azure_auth(client_id: &str) -> anyhow::Result<Arc<Mutex<AzureAuth>>> {
     let auth = AzureAuth::new_async(client_id).await?;
     Ok(Arc::new(Mutex::new(auth)))
@@ -30,26 +35,20 @@ impl FromRequestParts<AppState> for AzureClaims {
         parts: &mut axum::http::request::Parts,
         state: &AppState,
     ) -> Result<Self, Self::Rejection> {
-        let authz = match parts.headers.get(axum::http::header::AUTHORIZATION) {
-            Some(h) => {
-                debug!("Authorization header found.");
-                h
-            }
-            None => {
-                warn!("Missing authorization header,");
-                return Err(AppError::Unauthorized);
-            }
+        let authz = if let Some(h) = parts.headers.get(axum::http::header::AUTHORIZATION) {
+            debug!("Authorization header found.");
+            h
+        } else {
+            warn!("Missing authorization header,");
+            return Err(AppError::Unauthorized);
         };
 
-        let token = match bearer_token(authz) {
-            Some(t) => {
-                debug!("Bearer token extracted (len={})", t.len());
-                t
-            }
-            None => {
-                warn!("Auth header is not a valid Bearer token");
-                return Err(AppError::Unauthorized);
-            }
+        let token = if let Some(t) = bearer_token(authz) {
+            debug!("Bearer token extracted (len={})", t.len());
+            t
+        } else {
+            warn!("Auth header is not a valid Bearer token");
+            return Err(AppError::Unauthorized);
         };
 
         let decoded = {
@@ -80,6 +79,6 @@ impl FromRequestParts<AppState> for AzureClaims {
             }
         };
 
-        Ok(AzureClaims(decoded.claims))
+        Ok(Self(decoded.claims))
     }
 }

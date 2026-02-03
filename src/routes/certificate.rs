@@ -17,6 +17,11 @@ pub struct CertificateFilter {
     pub role: Option<String>,
 }
 
+/// Returns certificates filtered by query parameters.
+///
+/// # Errors
+///
+/// Returns an error if the database query fails.
 pub async fn get_certificate(
     State(state): State<AppState>,
     Query(filter): Query<CertificateFilter>,
@@ -35,6 +40,11 @@ pub async fn get_certificate(
     Ok(Json(certificates))
 }
 
+/// Returns a certificate by its id.
+///
+/// # Errors
+///
+/// Returns an error if the certificate is not found or the database query fails.
 pub async fn get_certificate_by_id(
     State(state): State<AppState>,
     Path(id): Path<Uuid>,
@@ -44,12 +54,17 @@ pub async fn get_certificate_by_id(
         .fetch_optional(&state.pool)
         .await?;
 
-    match certificate {
-        Some(certificate) => Ok(Json(certificate)),
-        None => Err(AppError::NotFound),
-    }
+    certificate.map_or_else(
+        || Err(AppError::NotFound),
+        |certificate| Ok(Json(certificate)),
+    )
 }
 
+/// Returns distinct certificate roles.
+///
+/// # Errors
+///
+/// Returns an error if the database query fails.
 pub async fn get_certificate_roles(
     State(state): State<AppState>,
 ) -> Result<Json<Vec<String>>, AppError> {

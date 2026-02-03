@@ -1,4 +1,4 @@
-use axum::{Json, http::StatusCode, response::IntoResponse};
+use axum::{http::StatusCode, response::IntoResponse, Json};
 use serde::Serialize;
 use thiserror::Error;
 
@@ -29,9 +29,9 @@ struct ErrorBody {
 impl IntoResponse for AppError {
     fn into_response(self) -> axum::response::Response {
         let status = match self {
-            AppError::Unauthorized => StatusCode::UNAUTHORIZED,
-            AppError::Forbidden => StatusCode::FORBIDDEN,
-            AppError::NotFound => StatusCode::NOT_FOUND,
+            Self::Unauthorized => StatusCode::UNAUTHORIZED,
+            Self::Forbidden => StatusCode::FORBIDDEN,
+            Self::NotFound => StatusCode::NOT_FOUND,
             _ => StatusCode::INTERNAL_SERVER_ERROR,
         };
         (
@@ -39,8 +39,8 @@ impl IntoResponse for AppError {
             Json(ErrorBody {
                 error: self.to_string(),
                 cause: match &self {
-                    AppError::Db(e) => Some(e.to_string()),
-                    AppError::Internal(e) => Some(e.to_string()),
+                    Self::Db(e) => Some(e.to_string()),
+                    Self::Internal(e) => Some(e.to_string()),
                     _ => None,
                 },
             }),
